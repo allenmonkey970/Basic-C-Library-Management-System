@@ -15,7 +15,7 @@ Make sure you have the following software installed:
 1. Clone the repository:
 
     ```bash
-    git clone <repository_url>
+    git clone <https://github.com/allenmonkey970/Basic-C-Library-Management-System>
     cd library-management-system
     ```
 
