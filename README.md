@@ -44,7 +44,7 @@ Make sure you have the following software installed:
 
 ### Extending the Project
 
-You can extend this library management system by implementing the following features:
+Plans on extending this library management system by implementing the following features:
 
 1. **Reading Books from a CSV File:**
     - Create a function to read book data from a CSV file and add the books to the library.
