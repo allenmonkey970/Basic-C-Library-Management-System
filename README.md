@@ -55,6 +55,9 @@ Plans on extending this library management system by implementing the following 
 3. **Online Checkout:**
     - Add functionality to allow users to check out books online.
 
+4. **Threads:**
+    - Add functionality to allow multithreading for improved performance.
+
 ### Contributing
 
 Feel free to contribute to this project by submitting pull requests or reporting issues.
