@@ -10,6 +10,8 @@ void addBook(std::vector<Book>& library, const Book& book) {
     library.push_back(book);
 }
 
+// add plans to get books added from csv file and add ways to look up, check out online books
+
 int main() {
     Book book1("1984", "George Orwell", "9780451524935", 1949);
     addBook(library, book1);
