@@ -10,7 +10,7 @@ void addBook(std::vector<Book>& library, const Book& book) {
     library.push_back(book);
 }
 
-// add plans to get books added from csv file and add ways to look up, check out online books
+
 
 void loadBooks() {
     std::ifstream booksFile("books.csv");
@@ -22,48 +22,42 @@ void loadBooks() {
 
     std::string line;
     while (std::getline(booksFile, line)) {
-        // Assuming the format of each line is title,author,isbn,year
-        std::string title, author, isbn;
-        int year;
-
         size_t startPos = 0;
         size_t endPos = line.find(',');
 
         // Extract title
-        title = line.substr(startPos, endPos - startPos);
+        std::string title = line.substr(startPos, endPos - startPos);
 
         // Extract author
         startPos = endPos + 1;
         endPos = line.find(',', startPos);
-        author = line.substr(startPos, endPos - startPos);
+        std::string author = line.substr(startPos, endPos - startPos);
 
         // Extract ISBN
         startPos = endPos + 1;
         endPos = line.find(',', startPos);
-        isbn = line.substr(startPos, endPos - startPos);
+        std::string isbn = line.substr(startPos, endPos - startPos);
 
         // Extract year
         startPos = endPos + 1;
-        year = std::stoi(line.substr(startPos));
+        int year = std::stoi(line.substr(startPos));
+
+        Book newBook(title, author, isbn, year);
+        library.push_back(newBook);
     }
 }
 
 
 int main() {
     loadBooks();
-
-
-
-    Book book1("1984", "George Orwell", "9780451524935", 1949);
-    addBook(library, book1);
-
-    // Display the book details
+    std::cout << "Number of books loaded: " << library.size() << std::endl;
     for (const auto& book : library) {
         std::cout << "Title: " << book.title << "\n"
                   << "Author: " << book.author << "\n"
                   << "ISBN: " << book.isbn << "\n"
                   << "Year: " << book.year << "\n";
     }
+
 
     return 0;
 }
