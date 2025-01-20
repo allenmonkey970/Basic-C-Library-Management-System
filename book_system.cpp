@@ -1,10 +1,10 @@
 #include "book_system.h"
-Book::Book(std::string t, std::string a, std::string i, int y) : title(t), author(a), isbn(i), year(y) {}
-
 #include <vector>
 #include <iostream>
 #include <fstream>
 #include <sstream>
+//book class and adds vector filled with books
+Book::Book(std::string t, std::string a, std::string i, int y) : title(t), author(a), isbn(i), year(y) {}
 std::vector<Book> library;
 
 void addBook(std::vector<Book>& library, const Book& book) {
@@ -12,7 +12,7 @@ void addBook(std::vector<Book>& library, const Book& book) {
 }
 
 void loadBooks() {
-    std::ifstream booksFile("book1.csv");
+    std::ifstream booksFile("books.csv");
 
     if (!booksFile.is_open()) {
         std::cerr << "Books file not found" << std::endl;
@@ -40,16 +40,23 @@ void loadBooks() {
     }
 }
 
+void searchByTitle(const std::vector<Book>& library, const std::string& searchTitle) {
+    bool found = false;
+    for (const auto& book : library) {
+        if (book.title == searchTitle) {
+            std::cout << "Found: " << book.title << " by " << book.author << '\n';
+            found = true;
+        }
+    }
+    if (!found) {
+        std::cout << "Book not found \n";
+    }
+}
+
 
 int main() {
     loadBooks();
-    for (const auto& book : library) {
-        std::cout << "Title: " << book.title << "\n"
-                  << "Author: " << book.author << "\n"
-                  << "ISBN: " << book.isbn << "\n"
-                  << "Year: " << book.year << "\n";
-    }
-
+    searchByTitle(library, "Moby Dick");
 
     return 0;
 }
