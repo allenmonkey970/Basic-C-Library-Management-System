@@ -40,6 +40,19 @@ void loadBooks() {
     }
 }
 // add search by ISBN
+void searchByISBN(const std::vector<Book>& library, const std::string& searchISBN) {
+    bool found = false;
+    for (const auto& book : library) {
+        if (book.isbn == searchISBN) {
+            std::cout << "Found: " << book.title << " by " << book.author << '\n';
+            found = true;
+        }
+    }
+    if (!found) {
+        std::cout << "Book not found \n";
+    }
+}
+
 void searchByTitle(const std::vector<Book>& library, const std::string& searchTitle) {
     bool found = false;
     for (const auto& book : library) {
@@ -57,6 +70,7 @@ void searchByTitle(const std::vector<Book>& library, const std::string& searchTi
 int main() {
     loadBooks();
     searchByTitle(library, "Moby Dick");
+    searchByISBN(library, "9780060935467");
 
     return 0;
 }
