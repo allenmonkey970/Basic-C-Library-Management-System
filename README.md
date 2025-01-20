@@ -33,30 +33,26 @@ Make sure you have the following software installed:
     ./library_management_system
     ```
 
-2. The program will add a book to the library and display its details:
+2. The program will load books from the `books.csv` file, search for a book by title or ISBN, check out a book, and then return it. Here's an example of what the output might look like:
 
-    ```
-    Title: 1984
-    Author: George Orwell
-    ISBN: 9780451524935
-    Year: 1949
-    ```
+```
+Found: Moby Dick by Herman Melville
+Found: The Art of War by Sun Tzu
+Checked out: The Art of War
+Returned: The Art of War
+```
 
-### Extending the Project
 
-Plans on extending this library management system by implementing the following features:
+### Updated features
 
 1. **Reading Books from a CSV File:**
-    - Create a function to read book data from a CSV file and add the books to the library.
+    - function to read book data from a CSV file and add the books to the library.
     
 2. **Book Lookup:**
-    - Implement functions to search for books in the library by title, author, or ISBN.
+    - Implemented functions to search for books in the library by title, or ISBN.
 
 3. **Online Checkout:**
     - Add functionality to allow users to check out books online.
-
-4. **Threads:**
-    - Add functionality to allow multithreading for improved performance.
 
 ### Contributing
 
