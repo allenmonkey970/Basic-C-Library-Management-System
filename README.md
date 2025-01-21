@@ -22,7 +22,7 @@ Make sure you have the following software installed:
 2. Navigate to the Working Directory
    - **IDE:** This can be done by making the working directory to the folder.
    - **Console**
-      ```bash
+    ```bash
     cd YOURPATHWAY/Basic-C-Library-Management-System
     ```    
 3. Compile the code:
