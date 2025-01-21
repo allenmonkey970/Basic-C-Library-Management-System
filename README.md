@@ -19,8 +19,13 @@ Make sure you have the following software installed:
     git clone https://github.com/allenmonkey970/Basic-C-Library-Management-System.git
     cd library-management-system
     ```
-
-2. Compile the code:
+2. Navigate to the Working Directory
+   - **IDE:** This can be done by making the working directory to the folder.
+   - **Console**
+      ```bash
+    cd YOURPATHWAY/Basic-C-Library-Management-System
+    ```    
+3. Compile the code:
 
     ```bash
     g++ -o library_management_system main.cpp book_system.cpp
