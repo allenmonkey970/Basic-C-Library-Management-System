@@ -1,6 +1,7 @@
 # Library Management System
 
-This is a basic library management system implemented in C++. The system allows you to add books to the library and display their details. The project can be extended to include additional features such as reading book data from a CSV file and adding functionalities for book lookup and online checkout.
+This is a basic library management system implemented in C++. The system allows you to add books to the library and display their details. The 
+include  features such as reading book data from a CSV file and  functionalities for book lookup and online checkout.
 
 ## Getting Started
 
