@@ -53,8 +53,10 @@ Returned: The Art of War
 
 3. **Online Checkout:**
     - Add functionality to allow users to check out books online.
-### possible plans
-1. **user Interface/gui**
+
+
+### Possible Plans
+1. **User Interface/GUI**
    - Using possibly Qt or wxWidgets.
 
 ### Contributing
